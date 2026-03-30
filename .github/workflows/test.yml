@@ -26,7 +26,7 @@ jobs:
           chezmoi init --source="$GITHUB_WORKSPACE"
 
       - name: Apply dotfiles (skip run scripts)
-        run: chezmoi apply --exclude=scripts --force
+        run: chezmoi apply --source="$GITHUB_WORKSPACE" --exclude=scripts --force
 
       - name: Verify key files exist
         run: |
@@ -51,4 +51,4 @@ jobs:
           echo "gitconfig content verified"
 
       - name: Verify no drift after apply
-        run: chezmoi verify --exclude=scripts
+        run: chezmoi verify --source="$GITHUB_WORKSPACE" --exclude=scripts
