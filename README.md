@@ -50,7 +50,7 @@ chezmoi update    # Pull and apply latest changes
 
 | Path | Description |
 |------|-------------|
-| `dot_zshrc` | Zsh entry point (powerlevel10k + module loader) |
+| `dot_zshrc` | Zsh entry point (module loader) |
 | `dot_zsh/` | Zsh modules (aliases, history, completion, direnv, etc.) |
 | `dot_config/nvim/` | Neovim configuration (lazy.nvim + plugins) |
 | `dot_config/mise/` | mise runtime version manager config |
@@ -73,5 +73,6 @@ Managed by [mise](https://mise.jdx.dev/) (replaces nodebrew, pyenv, etc.):
 - Node.js
 - Python
 - Terraform
+- uv (Python package manager)
 
 Per-project versions can be set with `.mise.toml` or `.tool-versions`.
