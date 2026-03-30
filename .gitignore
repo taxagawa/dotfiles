@@ -1,0 +1,15 @@
+.DS_Store
+
+# Credentials and secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+*secret*
+*.keystore
+
+# chezmoi state
+.chezmoistate.boltdb

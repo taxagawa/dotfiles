@@ -1,0 +1,15 @@
+#!/bin/bash
+# Git hooks hash: {{ include ".git-hooks/pre-commit" | sha256sum }}
+# Re-runs when hook files change (chezmoi run_onchange)
+set -euo pipefail
+
+# Copy hooks from .git-hooks/ to .git/hooks/ so they survive cloning
+HOOKS_SRC="{{ .chezmoi.sourceDir }}/.git-hooks"
+HOOKS_DST="{{ .chezmoi.sourceDir }}/.git/hooks"
+
+if [[ -d "$HOOKS_SRC" ]]; then
+  for hook in "$HOOKS_SRC"/*; do
+    cp "$hook" "$HOOKS_DST/$(basename "$hook")"
+    chmod +x "$HOOKS_DST/$(basename "$hook")"
+  done
+fi

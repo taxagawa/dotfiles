@@ -1,0 +1,48 @@
+name: Test chezmoi
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install chezmoi
+        run: brew install chezmoi
+
+      - name: Initialize chezmoi with test data
+        run: |
+          chezmoi init --source="$GITHUB_WORKSPACE" --promptString name="Test User" --promptString email="test@example.com"
+
+      - name: Apply dotfiles (skip run scripts)
+        run: chezmoi apply --exclude=scripts --force
+
+      - name: Verify key files exist
+        run: |
+          test -f ~/.zshrc
+          test -f ~/.gitconfig
+          test -f ~/.gitignore_global
+          test -f ~/.tmux.conf
+          test -f ~/.config/nvim/init.lua
+          test -f ~/.config/nvim/lua/config/options.lua
+          test -f ~/.config/nvim/lua/config/keymaps.lua
+          test -f ~/.config/nvim/lua/config/lazy.lua
+          test -f ~/.config/mise/config.toml
+          test -d ~/.zsh
+          echo "All files deployed successfully"
+
+      - name: Verify gitconfig contains expected sections
+        run: |
+          grep -q "\[alias\]" ~/.gitconfig
+          grep -q "\[merge\]" ~/.gitconfig
+          grep -q "\[push\]" ~/.gitconfig
+          grep -q "Test User" ~/.gitconfig
+          echo "gitconfig content verified"
+
+      - name: Verify no drift after apply
+        run: chezmoi diff --exclude=scripts --exit-code

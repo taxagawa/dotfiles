@@ -1,0 +1,8 @@
+README.md
+Brewfile
+LICENSE
+.config/nvim/README.md
+.git-hooks/
+.github/
+.claude/
+CLAUDE.md

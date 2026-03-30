@@ -1,0 +1,12 @@
+#!/bin/bash
+# Brewfile hash: {{ include "Brewfile" | sha256sum }}
+# Re-runs when Brewfile changes (chezmoi run_onchange)
+set -euo pipefail
+
+# Install Homebrew if not present
+if ! command -v brew &>/dev/null; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# Install packages from Brewfile
+brew bundle --file="{{ .chezmoi.sourceDir }}/Brewfile" || true

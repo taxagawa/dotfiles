@@ -1,0 +1,5 @@
+#!/bin/sh
+# Scan for secrets before committing
+if command -v gitleaks >/dev/null 2>&1; then
+  gitleaks git --pre-commit --staged --verbose
+fi

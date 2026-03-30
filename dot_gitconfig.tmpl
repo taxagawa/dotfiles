@@ -1,0 +1,64 @@
+[user]
+	name = {{ .name }}
+	email = {{ .email }}
+[core]
+	excludesfile = ~/.gitignore_global
+	whitespace = cr-at-eol
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	sw = switch
+	lg = log --graph --oneline --decorate
+	d = diff
+	ds = diff --staged
+	cm = commit -m
+	ca = commit --amend
+[fetch]
+	# Automatically remove remote-tracking refs that no longer exist on the remote
+	prune = true
+	prunetags = true
+[diff]
+	# Produces more readable diffs, especially for code refactoring
+	algorithm = histogram
+[merge]
+	# Show the original text in addition to ours/theirs in conflict markers
+	conflictstyle = zdiff3
+[init]
+	defaultBranch = main
+[pull]
+	# Only allow fast-forward pulls; refuse to merge or rebase automatically
+	ff = only
+[push]
+	# Push the current branch to a branch of the same name on the remote
+	default = current
+	# Automatically set upstream tracking on first push
+	autoSetupRemote = true
+	# Make "push -f" use --force-with-lease --force-if-includes instead of bare --force
+	forceWithLease = true
+	forceIfIncludes = true
+[rebase]
+	# Automatically reorder fixup/squash commits during interactive rebase
+	autosquash = true
+	# Stash and restore uncommitted changes around rebase
+	autostash = true
+[rerere]
+	# Remember conflict resolutions and reapply them automatically
+	enabled = true
+[color]
+	ui = auto
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = red
+[color "branch"]
+	current = green bold
+	local = normal
+	remote = cyan
+[color "diff"]
+	meta = yellow bold
+	frag = cyan bold
+	old = red
+	new = green
+[ghq]
+	root = ~/dev/src
