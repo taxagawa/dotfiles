@@ -17,7 +17,13 @@ jobs:
 
       - name: Initialize chezmoi with test data
         run: |
-          chezmoi init --source="$GITHUB_WORKSPACE" --promptString name="Test User" --promptString email="test@example.com"
+          mkdir -p ~/.config/chezmoi
+          cat > ~/.config/chezmoi/chezmoi.yaml <<EOF
+          data:
+            name: "Test User"
+            email: "test@example.com"
+          EOF
+          chezmoi init --source="$GITHUB_WORKSPACE"
 
       - name: Apply dotfiles (skip run scripts)
         run: chezmoi apply --exclude=scripts --force
@@ -45,4 +51,4 @@ jobs:
           echo "gitconfig content verified"
 
       - name: Verify no drift after apply
-        run: chezmoi diff --exclude=scripts --exit-code
+        run: chezmoi verify --exclude=scripts
