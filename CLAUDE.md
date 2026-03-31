@@ -21,6 +21,7 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 ├── dot_zshrc                       # → ~/.zshrc (entry point)
 ├── dot_zsh/                        # → ~/.zsh/ (modular zsh config)
 │   ├── aliases.zsh
+│   ├── aws.zsh                     # AWS CLI command completion
 │   ├── chezmoi.zsh                 # Drift detection (once per day)
 │   ├── completion.zsh
 │   ├── direnv.zsh                  # direnv hook for .envrc support
