@@ -16,6 +16,16 @@ This will:
 
 ## Post-setup
 
+### Font
+
+This setup uses [Powerlevel10k](https://github.com/romkatv/powerlevel10k) with `nerdfont-v3` mode.
+Install **MesloLGS NF** and set it as your terminal font:
+
+- Download from [powerlevel10k font instructions](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
+- iTerm2: Preferences → Profiles → Text → Font → **MesloLGS NF**
+
+### Other
+
 ```bash
 # Install runtime versions managed by mise
 mise install
