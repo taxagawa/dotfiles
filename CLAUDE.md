@@ -20,10 +20,9 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 ├── Brewfile                        # Homebrew packages (CLI tools + GUI apps)
 ├── dot_zshrc                       # → ~/.zshrc (entry point)
 ├── dot_zsh/                        # → ~/.zsh/ (modular zsh config)
-│   ├── zz_abbr.zsh                 # Expandable abbreviations (loads after plugins.zsh)
-│   ├── aws.zsh                     # AWS CLI command completion
 │   ├── chezmoi.zsh                 # Drift detection (once per day)
 │   ├── completion.zsh
+│   ├── completion_aws.zsh          # AWS CLI completion (loads after completion.zsh)
 │   ├── direnv.zsh                  # direnv hook for .envrc support
 │   ├── fzf.zsh
 │   ├── history.zsh
@@ -31,7 +30,8 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 │   ├── mise.zsh
 │   ├── options.zsh
 │   ├── path.zsh
-│   └── plugins.zsh                # zplug + powerlevel10k
+│   ├── plugins.zsh                # zplug + powerlevel10k
+│   └── zz_abbr.zsh                # Expandable abbreviations (loads after plugins.zsh)
 ├── dot_config/
 │   ├── mise/config.toml            # → ~/.config/mise/config.toml
 │   └── nvim/                       # → ~/.config/nvim/
