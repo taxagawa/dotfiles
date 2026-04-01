@@ -18,6 +18,7 @@ nvim/
         ├── lualine.lua       # Status line
         ├── neo-tree.lua      # File explorer sidebar
         ├── tokyonight.lua    # Color scheme
+        ├── autopairs.lua     # Auto-close brackets and quotes
         ├── barbar.lua        # Tab-like buffer line
         ├── gitsigns.lua      # Git change indicators in the gutter
         ├── comment.lua       # Toggle comments
