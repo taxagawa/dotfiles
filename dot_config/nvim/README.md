@@ -18,6 +18,7 @@ nvim/
         ├── lualine.lua       # Status line
         ├── neo-tree.lua      # File explorer sidebar
         ├── tokyonight.lua    # Color scheme
+        ├── barbar.lua        # Tab-like buffer line
         ├── gitsigns.lua      # Git change indicators in the gutter
         ├── comment.lua       # Toggle comments
         └── markdown-preview.lua  # Live markdown preview in browser
@@ -42,7 +43,11 @@ Leader key: `Space`
 | `Ctrl+h/j/k/l` | Normal | Move between windows |
 | `Shift+h` | Normal | Previous buffer (tab) |
 | `Shift+l` | Normal | Next buffer (tab) |
+| `Alt+<` | Normal | Move buffer left |
+| `Alt+>` | Normal | Move buffer right |
 | `Space bd` | Normal | Close current buffer |
+| `Space bp` | Normal | Pin buffer |
+| `Space bo` | Normal | Close other buffers |
 | `Ctrl+d` | Normal | Scroll down (centered) |
 | `Ctrl+u` | Normal | Scroll up (centered) |
 
