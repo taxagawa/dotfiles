@@ -1,3 +1,8 @@
+# Enable Powerlevel10k instant prompt (must be at the very top of ~/.zshrc)
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # ~/.zshrc - Entry point
 # Source all configuration modules from ~/.zsh/
 for config_file in ~/.zsh/*.zsh(N); do
