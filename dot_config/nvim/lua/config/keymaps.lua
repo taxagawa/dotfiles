@@ -21,10 +21,7 @@ map("n", "<C-Down>", "<cmd>resize -2<CR>", { desc = "Decrease window height" })
 map("n", "<C-Left>", "<cmd>vertical resize -2<CR>", { desc = "Decrease window width" })
 map("n", "<C-Right>", "<cmd>vertical resize +2<CR>", { desc = "Increase window width" })
 
--- Buffer navigation
-map("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
-map("n", "<S-l>", "<cmd>bnext<CR>", { desc = "Next buffer" })
-map("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Delete buffer" })
+-- Buffer navigation (managed by barbar.nvim)
 
 -- Move lines in visual mode
 map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
