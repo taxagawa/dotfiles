@@ -21,12 +21,12 @@ if (( $+functions[abbr] )); then
   abbr -S -q ...='cd ../..'
 
   # Safety nets (prompt before overwrite/delete)
-  abbr -f -S -q cp='cp -i'
-  abbr -f -S -q mv='mv -i'
-  abbr -f -S -q rm='rm -i'
+  abbr -f -S -qq cp='cp -i'
+  abbr -f -S -qq mv='mv -i'
+  abbr -f -S -qq rm='rm -i'
 
   # ls (eza)
-  abbr -f -S -q ls='eza'
+  abbr -f -S -qq ls='eza'
   abbr -S -q ll='eza -lh'
   abbr -S -q la='eza -a'
   abbr -S -q lla='eza -lah'
