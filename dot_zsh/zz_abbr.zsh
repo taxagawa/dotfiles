@@ -5,6 +5,18 @@ if (( $+functions[abbr] )); then
 
   # Git
   abbr -S -q g='git'
+  abbr -S -q gst='git status'
+  abbr -S -q gco='git checkout'
+  abbr -S -q gbr='git branch'
+  abbr -S -q gsw='git switch'
+  abbr -S -q glg='git log --graph --oneline --decorate'
+  abbr -S -q gd='git diff'
+  abbr -S -q gds='git diff --staged'
+  abbr -S -q gcm='git commit -m'
+  abbr -S -q gca='git commit --amend'
+  abbr -S -q gp='git push'
+  abbr -S -q gpo='git push origin'
+  abbr -S -q gpu='git pull'
 
   # Neovim
   abbr -S -q v='nvim'

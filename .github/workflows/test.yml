@@ -44,7 +44,6 @@ jobs:
 
       - name: Verify gitconfig contains expected sections
         run: |
-          grep -q "\[alias\]" ~/.gitconfig
           grep -q "\[merge\]" ~/.gitconfig
           grep -q "\[push\]" ~/.gitconfig
           grep -q "Test User" ~/.gitconfig
