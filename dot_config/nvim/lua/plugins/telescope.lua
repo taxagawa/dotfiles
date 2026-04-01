@@ -14,7 +14,17 @@ return {
     { "<leader>fr", "<cmd>Telescope oldfiles<CR>", desc = "Recent files" },
   },
   config = function()
-    require("telescope").setup({})
+    require("telescope").setup({
+      defaults = {
+        file_ignore_patterns = { "%.git/" },
+      },
+      pickers = {
+        find_files = { hidden = true },
+        live_grep = {
+          additional_args = { "--hidden" },
+        },
+      },
+    })
     require("telescope").load_extension("fzf")
   end,
 }
