@@ -20,7 +20,7 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 ├── Brewfile                        # Homebrew packages (CLI tools + GUI apps)
 ├── dot_zshrc                       # → ~/.zshrc (entry point)
 ├── dot_zsh/                        # → ~/.zsh/ (modular zsh config)
-│   ├── aliases.zsh
+│   ├── zz_abbr.zsh                 # Expandable abbreviations (loads after plugins.zsh)
 │   ├── aws.zsh                     # AWS CLI command completion
 │   ├── chezmoi.zsh                 # Drift detection (once per day)
 │   ├── completion.zsh

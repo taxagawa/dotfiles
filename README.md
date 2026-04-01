@@ -51,7 +51,7 @@ chezmoi update    # Pull and apply latest changes
 | Path | Description |
 |------|-------------|
 | `dot_zshrc` | Zsh entry point (module loader) |
-| `dot_zsh/` | Zsh modules (aliases, history, completion, direnv, etc.) |
+| `dot_zsh/` | Zsh modules (abbreviations, history, completion, direnv, etc.) |
 | `dot_config/nvim/` | Neovim configuration (lazy.nvim + plugins) |
 | `dot_config/mise/` | mise runtime version manager config |
 | `dot_gitconfig.tmpl` | Git configuration (chezmoi template) |
