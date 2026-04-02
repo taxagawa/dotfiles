@@ -3,16 +3,23 @@ brew "chezmoi"
 brew "coreutils"
 brew "git"
 brew "git-lfs"
+brew "gnu-sed"
 # brew "mas"  # Requires swift source build on macOS 13 Intel
 brew "wget"
 
 # Shell
+brew "zsh"
 brew "fzf"
 brew "tmux"
 brew "zplug"
 
 # Editor
 brew "neovim"
+
+# System utilities
+brew "htop"
+brew "pv"
+brew "telnet"
 
 # Search & file tools
 brew "bat"
@@ -37,6 +44,12 @@ brew "mycli"
 # brew "mysql-client"  # Requires LLVM source build on macOS 13 Intel
 brew "pgcli"
 brew "shellcheck"
+
+# Kubernetes
+brew "helm"
+brew "k9s"
+brew "kubectl"
+brew "kustomize"
 
 # Cloud
 brew "awscli"

@@ -24,6 +24,18 @@ Install **MesloLGS NF** and set it as your terminal font:
 - Download from [powerlevel10k font instructions](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
 - iTerm2: Preferences → Profiles → Text → Font → **MesloLGS NF**
 
+### Shell
+
+Set Homebrew-installed zsh as default shell:
+
+```bash
+# Add Homebrew zsh to allowed shells
+echo /opt/homebrew/bin/zsh | sudo tee -a /etc/shells
+
+# Set as default shell
+chsh -s /opt/homebrew/bin/zsh
+```
+
 ### Other
 
 ```bash
