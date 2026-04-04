@@ -21,6 +21,7 @@ nvim/
         ├── autopairs.lua     # Auto-close brackets and quotes
         ├── barbar.lua        # Tab-like buffer line
         ├── gitsigns.lua      # Git change indicators in the gutter
+        ├── window-picker.lua # Window picker for neo-tree
         ├── comment.lua       # Toggle comments
         └── markdown-preview.lua  # Live markdown preview in browser
 ```
@@ -81,6 +82,8 @@ Leader key: `Space`
 | Key | Mode | Action |
 |-----|------|--------|
 | `Space ee` | Normal | Toggle file explorer |
+| `Space er` | Normal | Reveal current file in explorer |
+| `Space eb` | Normal | Show open buffers in explorer |
 
 ### Telescope (Fuzzy Finder)
 
