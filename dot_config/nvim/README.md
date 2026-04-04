@@ -43,6 +43,7 @@ Leader key: `Space`
 | Key | Mode | Action |
 |-----|------|--------|
 | `Ctrl+h/j/k/l` | Normal | Move between windows |
+| `Delete` | Normal | Move to left window (Karabiner C-h workaround) |
 | `Shift+h` | Normal | Previous buffer (tab) |
 | `Shift+l` | Normal | Next buffer (tab) |
 | `Alt+<` | Normal | Move buffer left |
