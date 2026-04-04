@@ -10,5 +10,14 @@ return {
       topdelete = { text = "‾" },
       changedelete = { text = "~" },
     },
+    -- Prevent error when barbar closes a buffer before gitsigns detaches
+    on_attach = function(bufnr)
+      vim.api.nvim_create_autocmd("BufDelete", {
+        buffer = bufnr,
+        callback = function()
+          pcall(require("gitsigns").detach, bufnr)
+        end,
+      })
+    end,
   },
 }
