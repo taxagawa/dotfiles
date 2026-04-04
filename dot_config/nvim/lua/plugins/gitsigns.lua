@@ -10,5 +10,15 @@ return {
       topdelete = { text = "‾" },
       changedelete = { text = "~" },
     },
+    -- Safely detach gitsigns before barbar removes the buffer
+    on_attach = function(bufnr)
+      vim.api.nvim_create_autocmd("BufDelete", {
+        buffer = bufnr,
+        callback = function()
+          pcall(require("gitsigns").detach, bufnr)
+        end,
+      })
+      return true  -- proceed with default gitsigns attach
+    end,
   },
 }
