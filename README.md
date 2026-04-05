@@ -36,6 +36,10 @@ echo /opt/homebrew/bin/zsh | sudo tee -a /etc/shells
 chsh -s /opt/homebrew/bin/zsh
 ```
 
+### Karabiner-Elements
+
+If using a different keyboard, update `product_id` and `vendor_id` in `dot_config/karabiner/karabiner.json` to match the new device. Key remapping rules (Ctrl+hjkl, CapsLock→Ctrl) work regardless of these IDs.
+
 ### Other
 
 ```bash
@@ -75,6 +79,8 @@ chezmoi update    # Pull and apply latest changes
 | `dot_zshrc` | Zsh entry point (instant prompt + module loader) |
 | `dot_zsh/` | Zsh modules (abbreviations, history, completion, direnv, etc.) |
 | `dot_config/nvim/` | Neovim configuration (lazy.nvim + plugins) |
+| `dot_config/gh/` | GitHub CLI config (protocol, editor, aliases) |
+| `dot_config/karabiner/` | Karabiner-Elements config (key remapping) |
 | `dot_config/mise/` | mise runtime version manager config |
 | `dot_gitconfig.tmpl` | Git configuration (chezmoi template) |
 | `dot_gitignore_global` | Global gitignore |

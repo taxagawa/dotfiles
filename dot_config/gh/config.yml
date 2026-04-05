@@ -1,0 +1,25 @@
+# GitHub CLI configuration
+# Authentication is NOT stored here (managed separately by `gh auth login`)
+version: 1
+
+# Use SSH for git operations (matches gitconfig remote URLs)
+git_protocol: ssh
+
+# Use Neovim for PR/issue editing
+editor: nvim
+
+# Interactive prompts for destructive or ambiguous commands
+prompt: enabled
+prefer_editor_prompt: disabled
+
+pager:
+browser:
+http_unix_socket:
+
+aliases:
+    co: pr checkout  # gh co <pr-number> to check out a PR branch
+
+color_labels: disabled
+accessible_colors: disabled
+accessible_prompter: disabled
+spinner: enabled
