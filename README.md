@@ -24,6 +24,17 @@ Install **MesloLGS NF** and set it as your terminal font:
 - Download from [powerlevel10k font instructions](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
 - iTerm2: Preferences → Profiles → Text → Font → **MesloLGS NF**
 
+### iTerm2 Color Scheme
+
+Install [Tokyo Night](https://github.com/enkia/tokyo-night-vscode-theme) color scheme to match the Neovim theme:
+
+```bash
+curl -sL "https://raw.githubusercontent.com/enkia/tokyo-night-vscode-theme/master/tokyo-night.itermcolors" -o /tmp/tokyo-night.itermcolors
+open /tmp/tokyo-night.itermcolors
+```
+
+Then apply: iTerm2 → Preferences → Profiles → Colors → Color Presets → **tokyo-night**
+
 ### Shell
 
 Set Homebrew-installed zsh as default shell:
