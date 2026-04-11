@@ -31,6 +31,7 @@ brew "tree"
 # brew "yq"  # Requires pandoc/cabal source build on macOS 13 Intel
 
 # Git tools
+brew "git-delta"
 brew "gh"
 brew "ghq"
 brew "gitleaks"
