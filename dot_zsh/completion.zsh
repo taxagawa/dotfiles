@@ -1,12 +1,4 @@
-# Completion
-
-# Regenerate compdump only once every 24 hours for faster startup
-autoload -Uz compinit
-if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
-  compinit
-else
-  compinit -C
-fi
+# Completion styles (compinit is called in plugins.zsh after zplug load)
 
 # Highlight current selection in completion menu
 zstyle ':completion:*:default' menu select=1
