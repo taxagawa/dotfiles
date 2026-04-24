@@ -63,10 +63,14 @@ brew "ffmpeg"
 # cask "google-chrome"  # Requires sudo for pkg installer; install manually
 # cask "google-japanese-ime"  # Requires sudo for pkg installer; install manually
 # cask "karabiner-elements"  # Requires sudo for pkg installer; install manually
+{{ if .personal -}}
 cask "spotify"
+{{ end -}}
 cask "visual-studio-code"
 # cask "zoom"  # Requires sudo for pkg installer; install manually
 
-# Mac App Store
+# Mac App Store (personal only)
+{{ if .personal -}}
 # mas "LINE", id: 539883307  # Requires mas (unavailable on macOS 13 Intel)
+{{ end -}}
 # mas "Xcode", id: 497799835  # Large download (~7GB); install manually if needed

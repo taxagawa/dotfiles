@@ -17,7 +17,7 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 ├── .chezmoiignore                  # Files excluded from home directory deployment
 ├── .git-hooks/                     # Git hooks (copied to .git/hooks/ by chezmoi)
 ├── .github/workflows/              # CI (chezmoi apply test)
-├── Brewfile                        # Homebrew packages (CLI tools + GUI apps)
+├── .chezmoitemplates/Brewfile       # Homebrew packages (chezmoi template, personal flag)
 ├── dot_zshrc                       # → ~/.zshrc (entry point)
 ├── dot_zsh/                        # → ~/.zsh/ (modular zsh config)
 │   ├── chezmoi.zsh                 # Drift detection (once per day)

@@ -97,7 +97,7 @@ chezmoi update    # Pull and apply latest changes
 | `dot_gitignore_global` | Global gitignore |
 | `dot_tmux.conf` | tmux configuration |
 | `dot_p10k.zsh` | Powerlevel10k prompt config |
-| `Brewfile` | Homebrew packages (CLI, GUI, Mac App Store) |
+| `.chezmoitemplates/Brewfile` | Homebrew packages (personal flag controls app selection) |
 | `.git-hooks/` | Git hooks (gitleaks pre-commit) |
 | `.github/workflows/` | CI (chezmoi apply test on macOS) |
 | `run_onchange_*.sh.tmpl` | chezmoi scripts (package install, git hooks setup) |
