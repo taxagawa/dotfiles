@@ -21,7 +21,7 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 ├── dot_zshrc                       # → ~/.zshrc (entry point)
 ├── dot_zsh/                        # → ~/.zsh/ (modular zsh config)
 │   ├── chezmoi.zsh                 # Drift detection (once per day)
-│   ├── completion.zsh              # Completion styles
+│   ├── completion.zsh              # Completion (compinit + styles)
 │   ├── direnv.zsh                  # direnv hook for .envrc support
 │   ├── fzf.zsh
 │   ├── history.zsh
@@ -29,7 +29,7 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 │   ├── mise.zsh
 │   ├── options.zsh
 │   ├── path.zsh
-│   ├── plugins.zsh                # zplug + powerlevel10k + compinit
+│   ├── plugins.zsh                # zplug + powerlevel10k
 │   ├── qq_completion_aws.zsh      # AWS CLI completion (loads after plugins.zsh)
 │   └── zz_abbr.zsh                # Expandable abbreviations (loads after plugins.zsh)
 ├── dot_config/
