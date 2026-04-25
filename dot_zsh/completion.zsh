@@ -1,8 +1,9 @@
 # Completion
 
 # Regenerate compdump only once every 24 hours for faster startup
+# Run full compinit when dump file is missing (new machine) or stale (>24h)
 autoload -Uz compinit
-if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+if [[ ! -f ~/.zcompdump ]] || [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
   compinit
 else
   compinit -C
