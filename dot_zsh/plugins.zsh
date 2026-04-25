@@ -14,12 +14,4 @@ if [[ -f ~/.zplug/init.zsh ]]; then
   fi
 
   zplug load
-
-  # Initialize completion after plugins have added their fpath entries
-  autoload -Uz compinit
-  if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
-    compinit
-  else
-    compinit -C
-  fi
 fi
