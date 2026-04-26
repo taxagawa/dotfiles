@@ -1,0 +1,2 @@
+# Remove renamed/obsolete files from home directory
+.zsh/completion_aws.zsh
