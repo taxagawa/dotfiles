@@ -13,7 +13,8 @@ This will:
 2. Install packages from Brewfile (CLI tools, GUI apps, Mac App Store apps)
 3. Install zplug (zsh plugin manager)
 4. Install Claude Code CLI
-5. Deploy all configuration files
+5. Install runtime versions via mise (if mise is available)
+6. Deploy all configuration files
 
 ## Post-setup
 
