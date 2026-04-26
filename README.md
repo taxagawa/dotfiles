@@ -59,7 +59,7 @@ If using a different keyboard, update `product_id` and `vendor_id` in `dot_confi
 # Install runtime versions managed by mise
 mise install
 
-# Configure powerlevel10k prompt
+# Reconfigure powerlevel10k prompt (optional, config is already deployed)
 p10k configure
 
 # Open a new shell to activate all settings
