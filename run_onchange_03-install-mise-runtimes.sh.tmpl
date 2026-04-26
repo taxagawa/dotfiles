@@ -1,0 +1,8 @@
+#!/bin/bash
+# mise config hash: {{ include "dot_config/mise/config.toml" | sha256sum }}
+# Re-runs when mise config changes (chezmoi run_onchange)
+set -euo pipefail
+
+if command -v mise &>/dev/null; then
+  mise install --yes
+fi
