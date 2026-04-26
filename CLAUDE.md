@@ -46,6 +46,7 @@ Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 ├── dot_tmux.conf                   # → ~/.tmux.conf
 ├── run_onchange_01-install-packages.sh.tmpl
 ├── run_onchange_02-setup-git-hooks.sh.tmpl
+├── run_once_02-install-zplug.sh
 └── run_once_03-install-claude-code.sh
 ```
 

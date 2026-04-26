@@ -11,8 +11,9 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply taxagawa
 This will:
 1. Install Homebrew (if not present)
 2. Install packages from Brewfile (CLI tools, GUI apps, Mac App Store apps)
-3. Install Claude Code CLI
-4. Deploy all configuration files
+3. Install zplug (zsh plugin manager)
+4. Install Claude Code CLI
+5. Deploy all configuration files
 
 ## Post-setup
 
@@ -101,7 +102,7 @@ chezmoi update    # Pull and apply latest changes
 | `.git-hooks/` | Git hooks (gitleaks pre-commit) |
 | `.github/workflows/` | CI (chezmoi apply test on macOS) |
 | `run_onchange_*.sh.tmpl` | chezmoi scripts (package install, git hooks setup) |
-| `run_once_*.sh` | One-time setup scripts (Claude Code CLI) |
+| `run_once_*.sh` | One-time setup scripts (zplug, Claude Code CLI) |
 | `CLAUDE.md` | Claude Code project instructions |
 
 ## Runtime version management
