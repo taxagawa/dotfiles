@@ -12,6 +12,7 @@ return {
     { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Find buffers" },
     { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Help tags" },
     { "<leader>fr", "<cmd>Telescope oldfiles<CR>", desc = "Recent files" },
+    { "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Search keymaps" },
   },
   config = function()
     require("telescope").setup({
