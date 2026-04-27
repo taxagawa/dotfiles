@@ -26,7 +26,8 @@ nvim/
         ├── markdown-preview.lua  # Live markdown preview in browser
         ├── conform.lua       # Auto-formatting on save
         ├── lint.lua          # Linting on save
-        └── mason-tool-installer.lua  # Auto-install formatters/linters via Mason
+        ├── mason-tool-installer.lua  # Auto-install formatters/linters via Mason
+        └── which-key.lua     # Keymap popup guide
 ```
 
 ## Keymaps
@@ -98,6 +99,7 @@ Leader key: `Space`
 | `Space fb` | Normal | List open buffers |
 | `Space fh` | Normal | Search help tags |
 | `Space fr` | Normal | Recent files |
+| `Space fk` | Normal | Search keymaps |
 
 ### LSP (Language Server)
 
