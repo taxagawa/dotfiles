@@ -23,7 +23,10 @@ nvim/
         ├── gitsigns.lua      # Git change indicators in the gutter
         ├── window-picker.lua # Window picker for neo-tree
         ├── comment.lua       # Toggle comments
-        └── markdown-preview.lua  # Live markdown preview in browser
+        ├── markdown-preview.lua  # Live markdown preview in browser
+        ├── conform.lua       # Auto-formatting on save
+        ├── lint.lua          # Linting on save
+        └── mason-tool-installer.lua  # Auto-install formatters/linters via Mason
 ```
 
 ## Keymaps
@@ -107,6 +110,7 @@ Available when a language server is attached to the buffer:
 | `K` | Normal | Hover documentation |
 | `Space rn` | Normal | Rename symbol |
 | `Space ca` | Normal | Code action |
+| `Space cf` | Normal | Format buffer |
 
 ### Auto-completion (nvim-cmp)
 
@@ -184,9 +188,23 @@ Available when a language server is attached to the buffer:
 Plugin updates are checked automatically and shown in the statusline.
 To apply updates, run `:Lazy update`.
 
+## Formatters & Linters
+
+Auto-format on save is enabled via `conform.nvim`. Linting runs on save via `nvim-lint`.
+
+| Language | Formatter | Linter |
+|----------|-----------|--------|
+| Lua | stylua | — |
+| Go | goimports, gofmt | golangci-lint |
+| Python | ruff | ruff |
+| TypeScript/JS | prettier | eslint_d |
+| Terraform | terraform_fmt | tflint (LSP) |
+| JSON/YAML | prettier | — |
+| Shell | shfmt | shellcheck |
+
 ## Adding a New Language Server
 
-Currently configured: `lua_ls`, `gopls`, `ts_ls`, `pyright`
+Currently configured: `lua_ls`, `gopls`, `ts_ls`, `pyright`, `terraformls`, `tflint`, `jsonls`, `yamlls`, `taplo`, `dockerls`, `docker_compose_language_service`, `bashls`
 
 To add a new language server:
 
