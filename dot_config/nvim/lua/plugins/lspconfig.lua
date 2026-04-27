@@ -7,7 +7,13 @@ return {
     "williamboman/mason-lspconfig.nvim",
     dependencies = { "williamboman/mason.nvim" },
     opts = {
-      ensure_installed = { "lua_ls", "gopls", "ts_ls", "pyright" },
+      ensure_installed = {
+        "lua_ls", "gopls", "ts_ls", "pyright",
+        "terraformls", "tflint",
+        "jsonls", "yamlls", "taplo",
+        "dockerls", "docker_compose_language_service",
+        "bashls",
+      },
     },
   },
   {
@@ -16,6 +22,7 @@ return {
     dependencies = {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
+      "b0o/schemastore.nvim",             -- JSON/YAML schema catalog
     },
     config = function()
       -- Enable nvim-cmp completion capabilities for all servers
@@ -34,8 +41,43 @@ return {
       vim.lsp.config("gopls", { capabilities = capabilities })
       vim.lsp.config("ts_ls", { capabilities = capabilities })
       vim.lsp.config("pyright", { capabilities = capabilities })
+      vim.lsp.config("terraformls", { capabilities = capabilities })
 
-      vim.lsp.enable({ "lua_ls", "gopls", "ts_ls", "pyright" })
+      -- JSON (auto-detects schemas for package.json, tsconfig.json, etc.)
+      vim.lsp.config("jsonls", {
+        capabilities = capabilities,
+        settings = {
+          json = {
+            schemas = require("schemastore").json.schemas(),
+            validate = { enable = true },
+          },
+        },
+      })
+
+      -- YAML (auto-detects schemas for k8s manifests, GitHub Actions, etc.)
+      vim.lsp.config("yamlls", {
+        capabilities = capabilities,
+        settings = {
+          yaml = {
+            schemaStore = { enable = false, url = "" },
+            schemas = require("schemastore").yaml.schemas(),
+          },
+        },
+      })
+
+      vim.lsp.config("taplo", { capabilities = capabilities })
+      vim.lsp.config("dockerls", { capabilities = capabilities })
+      vim.lsp.config("docker_compose_language_service", { capabilities = capabilities })
+      vim.lsp.config("bashls", { capabilities = capabilities })
+      vim.lsp.config("tflint", { capabilities = capabilities })
+
+      vim.lsp.enable({
+        "lua_ls", "gopls", "ts_ls", "pyright",
+        "terraformls", "tflint",
+        "jsonls", "yamlls", "taplo",
+        "dockerls", "docker_compose_language_service",
+        "bashls",
+      })
 
       -- LSP keymaps (only active in buffers with a language server attached)
       vim.api.nvim_create_autocmd("LspAttach", {
