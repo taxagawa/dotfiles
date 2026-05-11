@@ -27,7 +27,8 @@ nvim/
         ├── conform.lua       # Auto-formatting on save
         ├── lint.lua          # Linting on save
         ├── mason-tool-installer.lua  # Auto-install formatters/linters via Mason
-        └── which-key.lua     # Keymap popup guide
+        ├── which-key.lua     # Keymap popup guide
+        └── trouble.lua       # Diagnostics panel (errors/warnings list)
 ```
 
 ## Keymaps
@@ -113,6 +114,15 @@ Available when a language server is attached to the buffer:
 | `Space rn` | Normal | Rename symbol |
 | `Space ca` | Normal | Code action |
 | `Space cf` | Normal | Format buffer |
+
+### Diagnostics (trouble.nvim)
+
+| Key | Mode | Action |
+|-----|------|--------|
+| `Space xx` | Normal | Project-wide diagnostics |
+| `Space xb` | Normal | Buffer diagnostics |
+| `Space xs` | Normal | Symbols list |
+| `Space xq` | Normal | Quickfix list |
 
 ### Auto-completion (nvim-cmp)
 
