@@ -13,6 +13,7 @@ return {
         "jsonls", "yamlls", "taplo",
         "dockerls", "docker_compose_language_service",
         "bashls",
+        "elixirls",
       },
     },
   },
@@ -70,6 +71,7 @@ return {
       vim.lsp.config("docker_compose_language_service", { capabilities = capabilities })
       vim.lsp.config("bashls", { capabilities = capabilities })
       vim.lsp.config("tflint", { capabilities = capabilities })
+      vim.lsp.config("elixirls", { capabilities = capabilities })
 
       vim.lsp.enable({
         "lua_ls", "gopls", "ts_ls", "pyright",
@@ -77,6 +79,7 @@ return {
         "jsonls", "yamlls", "taplo",
         "dockerls", "docker_compose_language_service",
         "bashls",
+        "elixirls",
       })
 
       -- LSP keymaps (only active in buffers with a language server attached)

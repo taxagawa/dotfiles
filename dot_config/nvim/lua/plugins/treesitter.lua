@@ -10,6 +10,7 @@ return {
     local ensure = {
       "bash", "json", "lua", "markdown", "markdown_inline",
       "python", "go", "javascript", "typescript", "yaml", "toml",
+      "elixir", "heex", "eex",
     }
     for _, lang in ipairs(ensure) do
       pcall(function() vim.treesitter.language.add(lang) end)
