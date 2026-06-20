@@ -20,6 +20,9 @@ return {
       sh = { "shfmt" },
       bash = { "shfmt" },
       zsh = { "shfmt" },
+      elixir = { "mix" },
+      eelixir = { "mix" },
+      heex = { "mix" },
     },
     format_on_save = {
       timeout_ms = 3000,
