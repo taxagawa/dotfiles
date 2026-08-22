@@ -28,6 +28,13 @@ if (( $+functions[abbr] )); then
   abbr -S -q czd='chezmoi diff'
   abbr -S -q cza='chezmoi apply'
 
+  # AI CLI
+  abbr -S -q cc='claude'
+  abbr -S -q ccc='claude --continue'
+  abbr -S -q ccr='claude --resume'
+  abbr -S -q cx='codex'
+  abbr -S -q cxr='codex resume'
+
   # Navigation
   abbr -S -q ..='cd ..'
   abbr -S -q ...='cd ../..'
